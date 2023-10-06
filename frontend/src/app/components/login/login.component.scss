@@ -1,0 +1,45 @@
+@use "/src/app/middlewares/scss/others/sizes/padding-and-margin.scss";
+@use "/src/app/middlewares/scss/others/default-rules/mixins.scss" as mixins;
+@use "/src/app/middlewares/scss/others/theming/dark-colors.scss" as dark-colors;
+
+.login-wrapper {
+  @include mixins.div-justify-align-center(column);
+  height: 100%;
+  background-color: dark-colors.$primary-color;
+
+  .button-change-theme{
+    background-color: dark-colors.$second-color;
+    color: dark-colors.$primary-color;
+    padding: 0.5rem;
+  }
+
+  .login-form {
+    @include mixins.div-align-center(column);
+    background-color: dark-colors.$second-color;
+    width: 380px;
+    height: 460px;
+    border-radius: 10px;
+
+    img {
+      width: 80%;
+      padding: 1rem;
+    }
+
+    .login-inputs {
+      width: 80%;
+    }
+  }
+}
+
+.login-wrapper.dark-theme  {
+  background-color: #fff;
+
+  .login-form {
+    background-color: black;
+  }
+
+  .button-change-theme{
+    background-color: dark-colors.$primary-color;
+    color: dark-colors.$second-color;
+  }
+}

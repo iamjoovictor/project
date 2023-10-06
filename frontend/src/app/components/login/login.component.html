@@ -1,42 +1,47 @@
-<form class="center">
-  <div class="form">
-      <img src="../../../assets/images/logo.png">
-      <!-- <app-input-validator
-          class="input input-login"
+<form class="login-wrapper">
+  <button 
+    pButton
+    class="button-change-theme">
+    Trocar Tema
+  </button>
+
+  <div class="login-form">
+    <img src="../../../assets/images/login/dark-logo.svg">
+
+    <div class="login-inputs">
+      <div class="margin-top-2rem">
+        <app-input-validator
+          name="name"
+          inputId="name"
           [variableFormControl]="name"
-          [labelTitle]="translateService.translate('login.user')"
-          [labelErrorFirstValidator]="label_required_user"
+          [labelTitle]="'Usuário'"
+          [labelErrorFirstValidator]="'Campo obrigatório'"
           [idFirstValidator]="'required'"
           [inputType]="'text'"
           [submited]="submited"
-          [colSizeClass]="'col-12'"
-          (input)="onChangeInput()"
-          [pAutoFocus]="true"
-          name="name"
-          inputId="name"
-          >
-      </app-input-validator> -->
+          [colSizeClass]="'col-12'">
+        </app-input-validator>
+      </div>
 
-      <!-- <app-input-validator
-          class="input input-password"
+      <div class="margin-top-1-5rem">
+        <app-input-validator
           [variableFormControl]="password"
-          [labelTitle]="translateService.translate('login.password')"
-          [labelErrorFirstValidator]="label_required_password"
+          [labelTitle]="'Senha'"
+          [labelErrorFirstValidator]="'Campo obrigatório'"
           [idFirstValidator]="'required'"
           [inputType]="'password'"
           [submited]="submited"
-          [colSizeClass]="'col-12'"
-          (input)="onChangeInput()"
-      >
-      </app-input-validator> -->
-
-      <div class="buttons">
-          <button 
-            pBtnOK 
-            pButton 
-            type="submit" 
-            [label]="'Entrar'" 
-          ></button>
+          [colSizeClass]="'col-12'">
+        </app-input-validator>
       </div>
+    </div>
+
+    <div class="margin-top-1-5rem">
+      <button 
+        pButton 
+        type="submit" 
+        [label]="'Entrar'">
+      </button>
+    </div>
   </div>
 </form>

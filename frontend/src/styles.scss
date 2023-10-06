@@ -1,4 +1,51 @@
-@import "primeng/resources/themes/saga-blue/theme.css";
-@import "primeng/resources/primeng.css";
-// @import "primeflex/primeflex.css";
-// @import "primeicons/primeicons.css";
+@import "src/app/middlewares/scss/primeng/imports.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+}
+
+// :root {
+//   overflow: auto;
+//   scrollbar-width: 0.2vw;
+//   scrollbar-color: #A50034 #f1f1f1;
+// }
+
+// ::-webkit-scrollbar {
+//   width: 0.2vw;
+//   height: 0.7vh;
+// }
+
+// ::-webkit-scrollbar-track {
+//   background: #f1f1f1;
+//   border-radius: 10px;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   background: #A50034;
+//   border-radius: 10px;
+// }
+
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #A50034;
+// }
+
+
+// html{
+//   height: 100%;
+// }
+
+// .p-tabview.p-component, .p-component{
+//   font-family: "LG_Smart_SemiBold"!important;
+// }
+
+// body{
+//   font-family: 'LG_Smart_SemiBold'!important;
+//   height: 100%;
+//   margin: 0;
+// }
