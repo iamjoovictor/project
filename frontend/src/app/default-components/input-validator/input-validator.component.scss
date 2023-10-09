@@ -49,18 +49,17 @@
       color: #6c757d;
       transition-duration: 0.2s;
     }
+
+    background-color: var(--input-background);
+    color: var(--input-color);
+
+    &.ng-invalid.ng-untouched {
+      border-color: var(--input-border);
+    }
   } 
 
   label {
     margin-top: -0.5rem!important;
     color: var(--input-color);
-  }
-
-  input {
-    background-color: var(--input-background);
-
-    &.ng-invalid.ng-untouched {
-      border-color: var(--input-border);
-    }
   }
 }

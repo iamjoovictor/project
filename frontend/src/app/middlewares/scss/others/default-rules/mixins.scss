@@ -1,19 +1,33 @@
 //Align Divs
-@mixin div-justify-align-center($flex-direction: 'row') {
+@mixin div-justify-align-direction($justfy-content: center, $align-items: center, $flex-direction: column) {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: $justfy-content;
+  align-items: $align-items;
   flex-direction: $flex-direction;
 }
 
-@mixin div-justify-center($flex-direction: 'row') {
-  display: flex;
-  justify-content: center;
-  flex-direction: $flex-direction;
+//Animate
+@mixin animate($animation, $duration, $method, $times){
+  animation: $animation $duration $method $times;
 }
 
-@mixin div-align-center($flex-direction: 'row') {
-  display: flex;
-  align-items: center;
-  flex-direction: $flex-direction;
+//Key frames
+@mixin keyframe-basic-transition($name) {
+  @keyframes #{$name} {
+    0% {
+      opacity: 0;
+    }
+    50%{
+      opacity: 0.5;
+      }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin keyframe-custom($name) {
+  @keyframes #{$name} {
+    @content;
+  }
 }

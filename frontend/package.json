@@ -5,6 +5,7 @@
     "ng": "ng",
     "dev": "ng serve --proxy-config proxy.config.js --configuration=development",
     "prod": "ng serve --proxy-config proxy.config.js --configuration=production --host 150.150.251.119",
+    "local": "ng serve --proxy-config proxy.config.js --configuration=development --host 192.168.100.147",
     "build": "ng build --configuration=production --optimization --aot --build-optimizer",
     "build-dev": "ng build --configuration=development --optimization --aot --build-optimizer",
     "watch": "ng build --watch --configuration development",

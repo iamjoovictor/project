@@ -2,17 +2,35 @@
 @use "/src/app/middlewares/scss/others/default-rules/mixins.scss" as mixins;
 
 .login-wrapper {
-  @include mixins.div-justify-align-center(column);
-  height: 100%;
+  @include mixins.div-justify-align-direction(center, center);
+  min-height: 100%;
   background-color: var(--login-primary);
 
   .login-form {
-    @include mixins.div-align-center(column);
+    @include mixins.div-justify-align-direction(flex-start, center);
     background-color: var(--login-secondary);
     border: 1px solid var(--login-border);
     width: 380px;
     height: 460px;
     border-radius: 10px;
+
+    .top-buttons {
+      @include mixins.div-justify-align-direction(flex-end, flex-end, row);
+      width: 80%;
+      margin-top: 1rem;
+
+      button {
+        background-color: var(--login-secondary);
+        border: 1px solid var(--login-border);
+        padding: 0.25rem;
+        color: var(--login-border);
+
+        &:focus {
+          @include mixins.keyframe-basic-transition(fade);
+          @include mixins.animate(fade, 1s, linear, 1);
+        }
+      }
+    }
 
     img {
       width: 80%;
@@ -33,6 +51,72 @@
           background-color: rgb(0, 160, 0);
         }
       }
+    }
+  }
+}
+
+//Media Query by width
+@media screen and (max-width: 380px) {
+  .login-wrapper .login-form {
+    width: 100%;
+  }
+}
+
+//Media Query by height
+@media screen and (max-height: 460px) {
+  .login-wrapper {
+    @include mixins.div-justify-align-direction(flex-start, center);
+  }
+}
+
+@media screen and (min-height: 1025px) {
+  .login-wrapper {
+    .login-form {
+      width: 540px;
+      height: 600px;
+      border-radius: 12px;
+    }
+
+    img {
+      padding: 2rem;
+    }
+
+    .margin-top-2rem{
+      margin-top: 3.5rem;
+    }
+
+    .margin-top-1-5rem{
+      margin-top: 2.5rem;
+    }
+    
+    .margin-bottom-1-5rem{
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+@media screen and (min-height: 1911px) {
+  .login-wrapper {
+    .login-form {
+      width: 1080px;
+      height: 1200px;
+      border-radius: 24px;
+    }
+
+    img {
+      padding: 4rem;
+    }
+
+    .margin-top-2rem{
+      margin-top: 7rem;
+    }
+
+    .margin-top-1-5rem{
+      margin-top: 5rem;
+    }
+    
+    .margin-bottom-1-5rem{
+      margin-bottom: 5rem;
     }
   }
 }
