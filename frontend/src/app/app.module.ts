@@ -43,7 +43,9 @@ import { ProgressSpinnerComponent } from './default-components/progress-spinner/
     //Import Sub-Modules
     PrimengModule,
   ],
-  providers: [provideNgxMask()],
+  providers: [
+    provideNgxMask()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,13 +1,11 @@
 <form class="login-wrapper">
-  <button 
-    pButton
-    class="button-change-theme">
-    Trocar Tema
+  <button
+    pButton 
+    [label]="'Trocar Tema'"
+    (click)="changeTheme()">
   </button>
-
   <div class="login-form">
-    <img src="../../../assets/images/login/dark-logo.svg">
-
+    <img [src]="'../../../assets/images/login/' + theme +'-logo.svg'">
     <div class="login-inputs">
       <div class="margin-top-2rem">
         <app-input-validator
@@ -36,12 +34,15 @@
       </div>
     </div>
 
-    <div class="margin-top-1-5rem">
-      <button 
-        pButton 
-        type="submit" 
-        [label]="'Entrar'">
-      </button>
+    <div class="login-button">
+      <div class="margin-top-1-5rem">
+        <button 
+          pButton 
+          type="submit" 
+          [label]="'Entrar'"
+          class="col-12">
+        </button>
+      </div>
     </div>
   </div>
 </form>

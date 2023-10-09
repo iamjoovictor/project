@@ -1,5 +1,4 @@
 @use "/src/app/app.component.scss";
-@use "/src/app/middlewares/scss/others/theming/light-colors.scss" as light-colors;
 
 .content-input-validator{
   height: 54px;
@@ -54,5 +53,14 @@
 
   label {
     margin-top: -0.5rem!important;
+    color: var(--input-color);
+  }
+
+  input {
+    background-color: var(--input-background);
+
+    &.ng-invalid.ng-untouched {
+      border-color: var(--input-border);
+    }
   }
 }
