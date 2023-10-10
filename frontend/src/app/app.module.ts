@@ -10,8 +10,9 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 //Routing
 import { AppRoutingModule } from './app-routing.module';
 
-//Import SubModules
+//Import Modules
 import { PrimengModule } from './modules/primeng/primeng.module';
+import { TranslateJsonModule } from './modules/translate/translate-json.module';
 
 import { LoginComponent } from './components/login/login.component';
 
@@ -40,8 +41,9 @@ import { ProgressSpinnerComponent } from './default-components/progress-spinner/
     //Mask
     NgxMaskDirective, NgxMaskPipe,
 
-    //Import Sub-Modules
+    //Import Modules
     PrimengModule,
+    TranslateJsonModule,
   ],
   providers: [
     provideNgxMask()

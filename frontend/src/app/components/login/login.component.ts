@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { ThemeService } from 'src/app/services/theme/theme.service';
+import { GetTranslateService } from 'src/app/services/utils/get-translate/get-translate.service';
+import { ThemeService } from 'src/app/services/utils/theme/theme.service';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +24,8 @@ export class LoginComponent {
   theme: string = 'light';
 
   constructor(
-  private themeService: ThemeService
+    private themeService: ThemeService,
+    public translateService: GetTranslateService
   ) { }
 
   ngOnInit(): void {

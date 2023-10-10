@@ -1,18 +1,17 @@
 <form class="login-wrapper">
   <div class="login-form">
+    <p-dropdown [options]="[]" optionLabel="name"></p-dropdown>
     <div class="top-buttons">
-      <button
+      <button 
         *ngIf="theme=='light'"
-        pButton 
-        type="button"
-        class="pi pi-moon"
+        pButton pRipple
+        type="button"class="pi pi-moon"
         (click)="changeTheme()">
       </button>
-      <button
+      <button 
         *ngIf="theme=='dark'"
-        pButton 
-        type="button"
-        class="pi pi-sun"
+        pButton pRipple
+        type="button" class="pi pi-sun"
         (click)="changeTheme()">
       </button>
     </div>
@@ -50,10 +49,9 @@
     <div class="login-button">
       <div class="margin-top-1-5rem margin-bottom-1-5rem">
         <button 
-          pButton 
-          type="submit" 
-          [label]="'Entrar'"
-          class="col-12"
+          pButton pRipple
+          type="submit" class="col-12"
+          [label]="translateService.translate('login.enter')"
           (click)="onClickHandleLogin()">
         </button>
       </div>
