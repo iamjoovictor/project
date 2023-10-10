@@ -22,25 +22,27 @@
         <app-input-validator
           name="name"
           inputId="name"
-          [variableFormControl]="name"
+          [variableFormControl]="formControlUsername"
           [labelTitle]="'Usuário'"
-          [labelErrorFirstValidator]="'Campo obrigatório'"
+          [labelErrorFirstValidator]="labelRequiredUser"
           [idFirstValidator]="'required'"
           [inputType]="'text'"
           [submited]="submited"
-          [colSizeClass]="'col-12'">
+          [colSizeClass]="'col-12'"
+          (onBlur)="onBlurHandleInput()">
         </app-input-validator>
       </div>
 
       <div class="margin-top-1-5rem">
         <app-input-validator
-          [variableFormControl]="password"
+          [variableFormControl]="formControlPassword"
           [labelTitle]="'Senha'"
-          [labelErrorFirstValidator]="'Campo obrigatório'"
+          [labelErrorFirstValidator]="labelRequiredPassword"
           [idFirstValidator]="'required'"
           [inputType]="'password'"
           [submited]="submited"
-          [colSizeClass]="'col-12'">
+          [colSizeClass]="'col-12'"
+          (onBlur)="onBlurHandleInput()">
         </app-input-validator>
       </div>
     </div>
@@ -51,7 +53,8 @@
           pButton 
           type="submit" 
           [label]="'Entrar'"
-          class="col-12">
+          class="col-12"
+          (click)="onClickHandleLogin()">
         </button>
       </div>
     </div>

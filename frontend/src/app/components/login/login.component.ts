@@ -10,8 +10,11 @@ import { ThemeService } from 'src/app/services/theme/theme.service';
 export class LoginComponent {
   
   //Form Controls
-  name = new FormControl('', [Validators.required]);
-  password = new FormControl('', [Validators.required]);
+  formControlUsername = new FormControl('', [Validators.required]);
+  labelRequiredUser: string = 'Usuário é obrigatório';
+
+  formControlPassword = new FormControl('', [Validators.required]);
+  labelRequiredPassword: string = 'Senha é obrigatória';
 
   //Status of form submition
   submited = false;
@@ -28,11 +31,56 @@ export class LoginComponent {
   }
 
   changeTheme() {
-    this.theme = this.themeService.getTheme();
-    this.theme = (this.theme == 'dark' ? 'light':'dark');
+    setTimeout(() => {
+      this.theme = this.themeService.getTheme();
+      this.theme = (this.theme == 'dark' ? 'light':'dark');
+  
+      this.themeService.setTheme(this.theme);
+  
+      this.theme = this.themeService.getTheme();
+    }, 200)
+  }
 
-    this.themeService.setTheme(this.theme);
+  onBlurHandleInput() {
+    this.labelRequiredUser = 'Usuário é obrigatório';
+    this.labelRequiredPassword = 'Senha é obrigatória';
+  }
 
-    this.theme = this.themeService.getTheme();
+  onClickHandleLogin() {
+    this.submited = true;
+
+    this.verifyLogin();
+  }
+
+  verifyLogin() {
+    let username = this.formControlUsername.value;
+    let password = this.formControlPassword.value;
+
+    if(username?.trim() && password?.trim()) {
+      if(username == 'admin' && password == '123') {
+        this.inativeUserWarning();
+      }
+
+      else {
+        this.incorrectUserWarning();
+      }
+    }
+  }
+
+  inativeUserWarning() {
+    this.resetFormControl();
+    this.labelRequiredUser = '';
+    this.labelRequiredPassword = 'Usuário Inativo';
+  }
+
+  incorrectUserWarning() {
+    this.resetFormControl();
+    this.labelRequiredUser = '';
+    this.labelRequiredPassword = 'O usuário ou senha inseridos estão incorretos!';
+  }
+
+  resetFormControl() {
+    this.formControlUsername.reset();
+    this.formControlPassword.reset();
   }
 }

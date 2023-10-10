@@ -1,15 +1,15 @@
 const PROXY_CONFIG = [
     {
-        context: ['/api_lg'],
-        // target: 'http://150.150.251.243:3000/',
+        context: ['/production'],
+        // target: 'http://0.0.0.0:3000/',
         secure: false,
-        pathRewrite: { '^/api_lg': ''}
+        pathRewrite: { '^/production': ''}
     },
     {
-        context: ['/mock_api'],
-        // target: 'http://192.168.100.122:3000/',
+        context: ['/mock_local'],
+        // target: 'http://0.0.0.0:3000/',
         secure: false,
-        pathRewrite: { '^/mock_api': ''}
+        pathRewrite: { '^/mock_local': ''}
     }
 ]
 
