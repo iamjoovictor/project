@@ -12,10 +12,10 @@ export class LoginComponent {
   
   //Form Controls
   formControlUsername = new FormControl('', [Validators.required]);
-  labelRequiredUser: string = 'Usuário é obrigatório';
+  labelRequiredUser: string = '';
 
   formControlPassword = new FormControl('', [Validators.required]);
-  labelRequiredPassword: string = 'Senha é obrigatória';
+  labelRequiredPassword: string = '';
 
   //Status of form submition
   submited = false;
@@ -44,8 +44,8 @@ export class LoginComponent {
   }
 
   onBlurHandleInput() {
-    this.labelRequiredUser = 'Usuário é obrigatório';
-    this.labelRequiredPassword = 'Senha é obrigatória';
+    this.labelRequiredUser = this.translateService.translate('login.requiredUser');
+    this.labelRequiredPassword = this.translateService.translate('login.requiredPassword');
   }
 
   onClickHandleLogin() {
@@ -72,13 +72,13 @@ export class LoginComponent {
   inativeUserWarning() {
     this.resetFormControl();
     this.labelRequiredUser = '';
-    this.labelRequiredPassword = 'Usuário Inativo';
+    this.labelRequiredPassword = this.translateService.translate('login.inactiveUser');
   }
 
   incorrectUserWarning() {
     this.resetFormControl();
     this.labelRequiredUser = '';
-    this.labelRequiredPassword = 'O usuário ou senha inseridos estão incorretos!';
+    this.labelRequiredPassword = this.translateService.translate('login.incorrectUserOrPassword');
   }
 
   resetFormControl() {

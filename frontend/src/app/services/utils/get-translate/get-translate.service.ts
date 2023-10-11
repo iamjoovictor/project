@@ -32,6 +32,10 @@ export class GetTranslateService {
     return translate;
   }
 
+  supportedLanguages() {
+    return ['en', 'pt'];
+  }
+
   getLanguage() {
     return localStorage.getItem('language') ?? 'en';
   }

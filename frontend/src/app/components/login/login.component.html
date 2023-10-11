@@ -22,7 +22,7 @@
           name="name"
           inputId="name"
           [variableFormControl]="formControlUsername"
-          [labelTitle]="'Usuário'"
+          [labelTitle]="translateService.translate('login.user')"
           [labelErrorFirstValidator]="labelRequiredUser"
           [idFirstValidator]="'required'"
           [inputType]="'text'"
@@ -35,7 +35,7 @@
       <div class="margin-top-1-5rem">
         <app-input-validator
           [variableFormControl]="formControlPassword"
-          [labelTitle]="'Senha'"
+          [labelTitle]="translateService.translate('login.password')"
           [labelErrorFirstValidator]="labelRequiredPassword"
           [idFirstValidator]="'required'"
           [inputType]="'password'"
