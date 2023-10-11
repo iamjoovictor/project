@@ -15,6 +15,7 @@
       [name]="name"
       [id]="inputId"
       (keypress)="testNumber($event)"
+      (input)="onInputChange()"
       (focus)="onInputFocus()"
       (blur)="onInputBlur()"
     >

@@ -14,7 +14,7 @@ import { GetTranslateService } from 'src/app/services/utils/get-translate/get-tr
       loader: {
         provide: TranslateLoader,
         useFactory: (http: HttpClient) => {
-          return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+          return new TranslateHttpLoader(http, './assets/i18n/app/', '.json');
         },
         deps: [HttpClient]
       }

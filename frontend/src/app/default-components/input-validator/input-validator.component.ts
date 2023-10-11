@@ -29,6 +29,7 @@ export class InputValidatorComponent {
   @Input() inputId:any
   @Input() disabled: any; /* Field must be disabled. */
   @Input() floatLabelClass: any; /* Float label type class. Ex: float-label-up */
+  @Output() onChange = new EventEmitter();
   @Output() onFocus = new EventEmitter();
   @Output() onBlur = new EventEmitter();
 
@@ -45,11 +46,15 @@ export class InputValidatorComponent {
     }
   }
 
-  onInputFocus(){
-    this.onFocus.emit()
+  onInputChange() {
+    this.onChange.emit();
   }
 
-  onInputBlur(){
-    this.onBlur.emit()
+  onInputFocus() {
+    this.onFocus.emit();
+  }
+
+  onInputBlur() {
+    this.onBlur.emit();
   }
 }

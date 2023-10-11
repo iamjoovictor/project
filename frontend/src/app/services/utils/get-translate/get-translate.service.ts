@@ -4,9 +4,7 @@ import { AuthService } from '../auth/auth.service';
 import { PrimeNGConfig } from 'primeng/api';
 import { tap } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class GetTranslateService {
 
   constructor(
@@ -27,7 +25,7 @@ export class GetTranslateService {
           translate = '';
         }
       })
-    ).subscribe();
+    ).subscribe().unsubscribe();
     
     return translate;
   }

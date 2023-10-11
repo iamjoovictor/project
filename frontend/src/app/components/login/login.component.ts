@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { Subscription } from 'rxjs';
 import { GetTranslateService } from 'src/app/services/utils/get-translate/get-translate.service';
 import { ThemeService } from 'src/app/services/utils/theme/theme.service';
 
@@ -8,7 +9,10 @@ import { ThemeService } from 'src/app/services/utils/theme/theme.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit, OnDestroy {
+
+  //Subscriptions
+  subscriptions: Subscription[] = [];
   
   //Form Controls
   formControlUsername = new FormControl('', [Validators.required]);
@@ -43,7 +47,7 @@ export class LoginComponent {
     }, 200)
   }
 
-  onBlurHandleInput() {
+  onChangeHandleInput() {
     this.labelRequiredUser = this.translateService.translate('login.requiredUser');
     this.labelRequiredPassword = this.translateService.translate('login.requiredPassword');
   }
@@ -67,6 +71,10 @@ export class LoginComponent {
         this.incorrectUserWarning();
       }
     }
+
+    else {
+      this.onChangeHandleInput();
+    }
   }
 
   inativeUserWarning() {
@@ -84,5 +92,11 @@ export class LoginComponent {
   resetFormControl() {
     this.formControlUsername.reset();
     this.formControlPassword.reset();
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.forEach((subscription) => {
+      subscription.unsubscribe();
+    })
   }
 }
