@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { GetTranslateService } from 'src/app/services/utils/get-translate/get-translate.service';
 import { ThemeService } from 'src/app/services/utils/theme/theme.service';
@@ -33,6 +34,20 @@ export class LoginComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
+    this.translateConfigToLoginModule();
+    this.getTheme();
+  }
+
+  translateConfigToLoginModule() {
+    this.translateService.addLangs(this.translateService.supportedLanguages());
+    let defaultLanguage = this.translateService.getLanguage();
+    this.translateService.setLanguage(defaultLanguage);
+    this.translateService.setDefaultLang(defaultLanguage);
+    this.translateService.use(defaultLanguage);
+    this.translateService.primeNgTranslate();
+  }
+
+  getTheme() {
     this.theme = this.themeService.getTheme();
   }
 

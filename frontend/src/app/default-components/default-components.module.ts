@@ -1,15 +1,15 @@
-// Imports Angular
+// Angular Imports
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-// Imports Mask
+// Mask Imports
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
-// Import Modules
-import { PrimengModule } from '../primeng/primeng.module';
+// Module Imports
+import { PrimengModule } from '../modules/primeng/primeng.module';
 
-// Import Components
+// Component Imports
 import { InputValidatorComponent } from 'src/app/default-components/input-validator/input-validator.component';
 import { LabelErrorComponent } from 'src/app/default-components/label-error/label-error.component';
 import { ProgressSpinnerComponent } from 'src/app/default-components/progress-spinner/progress-spinner.component';
@@ -22,20 +22,23 @@ import { ProgressSpinnerComponent } from 'src/app/default-components/progress-sp
     ProgressSpinnerComponent,
   ],
   imports: [
+    // Module Imports
+    PrimengModule,
+
+    // Angular Imports
     CommonModule,
     FormsModule,
     NgxMaskDirective, 
     NgxMaskPipe,
-    PrimengModule,
     ReactiveFormsModule,
   ],
   exports: [
-    // Components
+    // Component Imports
     InputValidatorComponent,
     LabelErrorComponent,
     ProgressSpinnerComponent,
 
-    //Modules
+    // Andular Imports
     FormsModule,
     ReactiveFormsModule
   ],

@@ -5,7 +5,7 @@
       <button 
         *ngIf="theme=='light'"
         pButton pRipple
-        type="button"class="pi pi-moon"
+        type="button" class="pi pi-moon"
         (click)="changeTheme()">
       </button>
       <button 
@@ -15,6 +15,7 @@
         (click)="changeTheme()">
       </button>
     </div>
+
     <img [src]="'../../../assets/images/login/' + theme +'-logo.svg'">
     <div class="login-inputs">
       <div class="margin-top-2rem">

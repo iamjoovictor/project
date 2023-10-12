@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 
 // Imports PrimeNG
 import { AutoFocusModule } from 'primeng/autofocus';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
 import { CalendarModule } from 'primeng/calendar';
 import { CardModule } from 'primeng/card';
@@ -44,7 +43,6 @@ import { TreeTableModule } from 'primeng/treetable';
   declarations: [],
   imports: [
     AutoFocusModule,
-    BrowserAnimationsModule,
     ButtonModule,
     CalendarModule,
     CardModule,
@@ -82,7 +80,6 @@ import { TreeTableModule } from 'primeng/treetable';
   ],
   exports:[
     AutoFocusModule,
-    BrowserAnimationsModule,
     ButtonModule,
     CalendarModule,
     CardModule,

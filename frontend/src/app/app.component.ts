@@ -3,6 +3,8 @@ import { ThemeService } from './services/utils/theme/theme.service';
 import { AuthService } from './services/utils/auth/auth.service';
 import { PrimeNGConfig } from 'primeng/api';
 import { GetTranslateService } from './services/utils/get-translate/get-translate.service';
+import { TranslateService } from '@ngx-translate/core';
+import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-root',
