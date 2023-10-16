@@ -6,6 +6,9 @@
 
 .p-float-label {
   input{
+    background-color: var(--input-background);
+    color: var(--input-color);
+
     &[type=number]{
       appearance: textfield;
   
@@ -46,15 +49,18 @@
       transition-timing-function: ease;
       line-height: 1;
       left: 0.5rem;
-      color: #6c757d;
+      color: var(--input-color);
       transition-duration: 0.2s;
     }
 
-    background-color: var(--input-background);
-    color: var(--input-color);
+    &.ng-invalid{
+      &.ng-untouched {
+        border-color: var(--input-border);
+      } 
 
-    &.ng-invalid.ng-untouched {
-      border-color: var(--input-border);
+      &.ng-dirty + label {
+        color: var(--input-label-invalid);
+      }
     }
   } 
 

@@ -29,6 +29,10 @@
           @include mixins.keyframe-basic-transition(fade);
           @include mixins.animate(fade, 1s, linear, 1);
         }
+
+        &.translate-button{
+          margin-right: 0.25rem;
+        }
       }
     }
 
@@ -42,7 +46,7 @@
     }
 
     .login-button {
-      width: 60%;
+      width: 80%;
 
       button {
         background-color: green;

@@ -1,23 +1,35 @@
 :root .dark-theme {
-  //Login Screen
+  // Login Screen
   --login-primary: #000;
   --login-secondary: #000;
   --login-border: #fff;
 
-  //Input component
+  // Input component
   --input-background: #000;
   --input-border: #fff;
   --input-color: #fff;
+  --input-label-invalid: #e24c4c;
+
+  // Dropdown component
+  --dropdown-background: #000;
+  --dropdown-border: #fff;
+  --dropdown-color: #fff;
 }
 
 :root .light-theme {
-  //Login Screen
+  // Login Screen
   --login-primary: #fff;
   --login-secondary: #fff;
   --login-border: #000;
 
-  //Input component
+  // Input component
   --input-background: #fff;
   --input-border: #000;
   --input-color: #000;
+  --input-label-invalid: #e24c4c;
+
+  // Dropdown component
+  --dropdown-background: #fff;
+  --dropdown-border: #000;
+  --dropdown-color: #000;
 }

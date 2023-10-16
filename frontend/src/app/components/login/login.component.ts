@@ -62,6 +62,25 @@ export class LoginComponent implements OnInit, OnDestroy {
     }, 200)
   }
 
+  changeLanguage() {
+    let defaultLanguage = this.translateService.getLanguage();
+    let newLanguage = (defaultLanguage == 'en' ? 'pt':'en');
+
+    this.translateService.setLanguage(newLanguage);
+    this.changeLanguageWithReload();
+    // this.changeLanguageWithoutReload(newLanguage);
+  }
+
+  // Works for all project modules.
+  changeLanguageWithReload() {
+    location.reload();
+  }
+
+  // Only works for the current module in the project.
+  changeLanguageWithoutReload(language: string) {
+    this.translateService.use(language);
+  }
+
   onChangeHandleInput() {
     this.labelRequiredUser = this.translateService.translate('login.requiredUser');
     this.labelRequiredPassword = this.translateService.translate('login.requiredPassword');
