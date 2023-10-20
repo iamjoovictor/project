@@ -133,10 +133,6 @@
 
   .col-8-dashboard {
     @include mixins.col-properties-dashboard(66.6667%, 0.5vh);
-    flex: 0 0 auto;
-    padding: 0.5vh;
-    width: 66.6667%;
-    overflow: hidden;
   }
 
   .col-8-5-dashboard {
@@ -295,10 +291,6 @@
 
   .col-8-dashboard {
     @include mixins.col-properties-dashboard(66.6667%, 0.5vw);
-    flex: 0 0 auto;
-    padding: 0.5vw;
-    width: 66.6667%;
-    overflow: hidden;
   }
 
   .col-8-5-dashboard {
