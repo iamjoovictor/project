@@ -1,5 +1,5 @@
-@use "/src/app/middlewares/scss/others/sizes/padding-and-margin.scss";
 @use "/src/app/middlewares/scss/others/default-rules/mixins.scss" as mixins;
+@use "/src/app/middlewares/scss/others/sizes-import.scss";
 
 .login-wrapper {
   @include mixins.div-justify-align-direction(center, center);

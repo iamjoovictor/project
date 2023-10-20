@@ -1,4 +1,4 @@
-//Align Divs
+// Align Divs
 @mixin div-justify-align-direction($justfy-content: center, $align-items: center, $flex-direction: column) {
   display: flex;
   justify-content: $justfy-content;
@@ -6,12 +6,12 @@
   flex-direction: $flex-direction;
 }
 
-//Animate
+// Animate
 @mixin animate($animation, $duration, $method, $times){
   animation: $animation $duration $method $times;
 }
 
-//Key frames
+// Key frames
 @mixin keyframe-basic-transition($name) {
   @keyframes #{$name} {
     0% {
@@ -30,4 +30,10 @@
   @keyframes #{$name} {
     @content;
   }
+}
+
+// Element Sizes
+@mixin width-and-height($width, $height) {
+  width: $width;
+  height: $height;
 }

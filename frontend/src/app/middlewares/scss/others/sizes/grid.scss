@@ -1,9 +1,20 @@
-//Grids
-.grid-full-height {
-  height: calc(100% + 1vh);
-  margin-right: -0.5vh;
-  margin-left: -0.5vh;
-  margin-top: -0.5vh;
+// Grids
+@media screen and (orientation: landscape) {
+  .grid-full-height {
+    height: calc(100% + 1vh);
+    margin-right: -0.5vh;
+    margin-left: -0.5vh;
+    margin-top: -0.5vh;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .grid-full-height {
+    height: calc(100% + 1vw);
+    margin-right: -0.5vw;
+    margin-left: -0.5vw;
+    margin-top: -0.5vw;
+  }
 }
 
 .grid-multiple-circles {

@@ -1,4 +1,11 @@
-@import "primeng/resources/themes/saga-blue/theme.css";
-@import "primeng/resources/primeng.css";
-@import "primeicons/primeicons.css";
-@import "primeflex/primeflex.css";
+// Primeng Saga Blue Theme
+@forward "primeng/resources/themes/saga-blue/theme.css";
+
+// Primeng Resources
+@forward "primeng/resources/primeng.css";
+
+// Prime Icons Import
+@forward "primeicons/primeicons.css";
+
+// Prime Flex Import
+@forward "primeflex/primeflex.css";
