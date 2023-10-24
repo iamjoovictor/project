@@ -30,8 +30,6 @@ export class AppComponent {
     let defaultTheme = this.themeService.getTheme();
 
     this.themeService.setTheme(defaultTheme);
-
-    this.primengConfig.ripple = true;
   }
 
   //PrimeNg Config
