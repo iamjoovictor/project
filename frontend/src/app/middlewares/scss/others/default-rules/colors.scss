@@ -1,4 +1,9 @@
 :root .dark-theme {
+  // Scrollbar Styling
+  --scrollbar-color: #A50034;
+  --scrollbar-color-75: #a50034bf;
+  --scrollbar-track: #fff;
+
   // Login Screen
   --login-primary: #000;
   --login-secondary: #000;
@@ -17,6 +22,11 @@
 }
 
 :root .light-theme {
+  // Scrollbar Styling
+  --scrollbar-color: #A50034;
+  --scrollbar-color-75: #a50034bf;
+  --scrollbar-track: #fff;
+
   // Login Screen
   --login-primary: #fff;
   --login-secondary: #fff;
