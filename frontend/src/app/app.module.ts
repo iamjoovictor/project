@@ -1,14 +1,14 @@
-//Imports Angular
+// Angular Imports
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 
-//Routing
+// Routing  Imports
 import { AppRoutingModule } from './app-routing.module';
 
-//Import Modules
+// Module Imports
 import { DefaultComponentsModule } from './default-components/default-components.module';
 import { PrimengModule } from './modules/primeng/primeng.module';
 

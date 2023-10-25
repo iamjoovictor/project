@@ -1,8 +1,8 @@
-// Imports Angular
+// Angular Imports
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-// Imports PrimeNG
+// PrimeNG Imports
 import { AutoFocusModule } from 'primeng/autofocus';
 import { ButtonModule } from 'primeng/button';
 import { CalendarModule } from 'primeng/calendar';
